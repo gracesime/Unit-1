@@ -11,7 +11,7 @@ public class App {
             System.out.println(i);
         }
 
-        for (int i = 3; i >= -9; i = i * -i){
+        for (int i = 3; i >= -81; i = i * -i){
             System.out.println(i);
         }
 
@@ -19,7 +19,9 @@ public class App {
             System.out.println(i);  
         }
         
-        for (int i = 0; i <= 81; i = i + 1){
+        for (int i = 1; i <= 9; i = i + 1){
+            System.out.println(i * i);
+            System.out.println(i + 3);
             System.out.println(i);
          }
         
