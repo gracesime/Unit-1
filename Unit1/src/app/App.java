@@ -5,15 +5,13 @@ public class App {
 
         System.out.println("Start first loop");
 
-        for (int i = 0; i <= 15; i++) {
-            if (i <= 9) {
-                System.out.println(i);
-            } else {
-                System.out.println(10);
-            }
-        }
-        for (int i = 11; i <= 19; i++) {
+        for (int i = 0; i <= 19; i++) {
             System.out.println(i);
+            if (i == 10){
+                for (int j = 0; j < 5; j++){
+                    System.out.println(i);
+                }
+            } 
         }
 
         System.out.println("End first loop");
