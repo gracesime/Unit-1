@@ -6,12 +6,32 @@ public class App {
 
         Scanner input = new Scanner(System.in);
 
-        System.out.println("What is the count?");
-        int count = input.nextInt();
-
-        for (int i = 1; i <= count; i++){
-            System.out.println(i);
+        System.out.println("How many states are in the U.S.?");
+        int states = input.nextInt();
+         if (states == 50){
+            System.out.println("CORRECT");
+        } else {
+            System.out.println("INCORRECT");
         }
+
+       System.out.println("What year did the Cold War end?");
+       int coldWar = input.nextInt();
+         if (coldWar == 1991){
+        System.out.println("CORRECT");
+        } else {
+        System.out.println("INCORRECT");
+        }
+
+        System.out.println("How many continents are there?");
+        int continents = input.nextInt();
+         if (continents == 7){
+            System.out.println("CORRECT");
+         } else {
+             System.out.println("INCORRECT");
+         }
+
+
+
         
 
        
