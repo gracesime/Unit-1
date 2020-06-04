@@ -4,37 +4,69 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) throws Exception {
 
-        Dog dog1 = new Dog();
-        Dog dog2 = new Dog();
-        Dog dog3 = new Dog();
 
         Scanner input = new Scanner(System.in);
         
-        dog1.name = "Henry";
-        dog1.breed = "basset hound";
-        dog1.age = 12;
-        dog1.eyeColor = "brown";
-        dog1.furColor = "brown, white, and black";
-        dog1.furType = "short";
 
-        dog2.name =  "Ruby";
-        dog2.breed = "golden retriever";
-        dog2.age = 3;
-        dog2.eyeColor = "brown";
-        dog2.furColor = "golden";
-        dog2.furType = "medium";
+        System.out.println("What is your name?");
+        String user = input.nextLine();
 
-        dog3.name = "Kota";
-        dog3.breed = "husky";
-        dog3.age = 7;
-        dog3.eyeColor = "blue";
-        dog3.furColor = "white and black";
-        dog3.furType = "long";
+        System.out.println("How much money are you starting with?");
+        int b = input.nextInt();
+        input.nextLine();
+
+        System.out.println("Please enter a password.");
+        String pass = input.nextLine();
+
+        System.out.println("Account created. Please log in.");
+
+        System.out.println("Enter your name.");
+        String inputUser = input.nextLine();
+
+        System.out.println("Enter your password.");
+        String inputPass = input.nextLine();
+        if (inputUser.equals(user) && inputPass.equals(pass)){
+            System.out.println("Access granted. Welcome " + user + ".");
+        } else {
+            System.out.println("Access denied. Invalid username or password.");
+            System.exit(0);
+        }
+
+        System.out.println("What would you like to do? Press 1 to check balance; press 2 to withdraw money; press 3 to change password.");
+        int n = input.nextInt();
+        input.nextLine();
+        if (n == 1){
+            System.out.println("Your balance is " + b + ".");
+        }
+        if (n == 2){
+            System.out.println("How much do you want to withdraw?");
+                int w = input.nextInt();
+                input.nextLine();
+                if (w <= b){
+                    System.out.println("You withdrew " + w + " dollars. Your new balance is " + (b - w) + ".");
+                } else {
+                    System.out.println("You have exceeded your current balance of " + b + ". Withdrawal unsuccessful.");
+                }
+        }
+        if (n == 3){
+            System.out.println("Please enter your existing password");
+            String resetPass = input.nextLine();
+                if (resetPass.equals(pass)){
+                    System.out.println("Please enter your new password");
+                     String newPass = input.nextLine();
+                     pass = newPass;
+                    System.out.println("Password changed");
+                }
+
+     }
+       
+
+        
+
+        
 
 
-        System.out.println("Dog number 1 is named " + dog1.name + " and he is a " + dog1.breed + ". He is " + dog1.age + " years old. His eyes are " + dog1.eyeColor + ", and his fur is " + dog1.furColor + " and " + dog1.furType + ".");
-        System.out.println("Dog number 2 is named " + dog2.name + " and she is a " + dog2.breed + ". She is " + dog2.age + " years old. Her eyes are " + dog2.eyeColor + ", and her fur is " + dog2.furColor + " and " + dog2.furType + ".");
-        System.out.println("Dog number 3 is named " + dog3.name + " and she is a " + dog3.breed + ". She is " + dog3.age + " years old. Her eyes are " + dog3.eyeColor + ", and her fur is " + dog3.furColor + " and " + dog3.furType + ".");
+       
 
     }
 }
